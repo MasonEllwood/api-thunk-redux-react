@@ -1,7 +1,8 @@
-export default () => {
-    // can never return undefined
-    // has to return some state
-    // never reach out to current state
-    // good = return state + action
-    return null;
+export default (state = [], action) => {
+    switch (action.type) {
+        case 'FETCH_POSTS':
+            return action.payload;
+        default:
+            return state;
+    }
 };
